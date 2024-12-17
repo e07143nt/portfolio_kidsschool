@@ -1,0 +1,1109 @@
+body {
+    background-color: rgb(245, 228, 206);
+}
+
+p {
+    color: rgb(31, 29, 22);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(31, 29, 22);
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+ol {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+.container {
+    max-width: 1000px;
+    margin-inline: auto;
+    padding-inline: 2%;
+    /* border: 1px solid red; */
+}
+
+/*
+ハンバーガーメニュー
+*/
+#navi {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    bottom: 0;
+    width: 300px;
+    color: #ffffffe9;
+    font-size: 1rem;
+    padding: 60px 25px;
+    background-color: #2a1f02;
+    overflow-y: auto;
+    transition: all 0.5s;
+    z-index: 20;
+    opacity: 0;
+}
+
+#navi a {
+    color: #ffffffd7;
+}
+
+.open #navi {
+    left: 0;
+    opacity: 1;
+}
+
+#navi ul {
+    margin: 0;
+    padding: 0;
+}
+
+#navi ul.nav-menu {
+    margin-bottom: 60px;
+    border-top: solid 1px #ffffff8d;
+}
+
+#navi ul.nav-menu li {
+    position: relative;
+    margin: 0;
+    padding: 20px 0;
+    border-bottom: solid 1px #ffffff9a;
+}
+
+#navi ul.nav-sns li {
+    padding: 5px 0;
+}
+
+.toggle_btn {
+    width: 40px;
+    height: 40px;
+    transition: all 0.5s;
+    cursor: pointer;
+    z-index: 20;
+    position: relative;
+}
+
+.toggle_btn span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    border-radius: 4px;
+    transition: all 0.5s;
+}
+
+.toggle_btn span:nth-child(1) {
+    top: 22%;
+}
+
+.toggle_btn span:nth-child(2) {
+    top: 50%;
+}
+
+.toggle_btn span:nth-child(3) {
+    top: 78%;
+}
+
+.open .toggle_btn span {
+    background-color: #fff;
+}
+
+.open .toggle_btn span:nth-child(1) {
+    top: 50%;
+    -webkit-transform: rotate(-315deg);
+    transform: rotate(-315deg);
+}
+
+.open .toggle_btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.open .toggle_btn span:nth-child(3) {
+    top: 50%;
+    -webkit-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
+
+#mask {
+    display: none;
+    transition: all 0.5s;
+}
+
+.open #mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.8;
+    z-index: 10;
+    cursor: pointer;
+}
+
+/* 【1】 */
+
+header {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+header img {
+    width: 160px;
+    padding: 10px;
+}
+
+/* main */
+.mainvisual img {
+    height: 70vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: left center;
+}
+
+/* top */
+.top {
+    margin-top: 20px;
+}
+
+.text-top {
+    color: rgb(45, 45, 42);
+}
+
+.text-top h1 {
+    text-align: center;
+}
+
+.top img {
+    width: 100%;
+}
+
+
+/* service */
+.service {
+    margin-top: 50px;
+    display: flex;
+}
+
+.service img {
+    width: 50%;
+    height: 25vh;
+    object-position: center -83px;
+}
+
+.service img {
+    width: 70%;
+    border-radius: 50%;
+
+}
+
+.service-text {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service h2 {
+    color: rgb(91, 220, 220);
+}
+
+.service a {
+    background-color: rgb(91, 220, 220);
+}
+
+
+
+/* fee */
+
+.fee {
+    display: flex;
+    margin-top: 30px;
+}
+
+.fee-text {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.fee img {
+    width: 70%;
+    height: 25vh;
+    border-radius: 50%;
+}
+
+.fee h2 {
+    color: rgb(246, 165, 60);
+
+
+}
+
+.fee a {
+    background-color: rgb(246, 165, 60);
+}
+
+
+
+/* lesson */
+.lesson {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.lesson-text {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lesson img {
+    width: 70%;
+    height: 25vh;
+    border-radius: 50%;
+}
+
+
+.lesson h2 {
+    color: rgb(248, 138, 209);
+
+}
+
+.lesson a {
+    background-color: rgb(248, 138, 209);
+
+}
+
+
+/* usage */
+
+
+.usage h3 {
+    text-align: center;
+}
+
+.usage-1 {
+    margin: 10px;
+    position: relative;
+    display: inline-block;
+    margin-left: 16px;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: whitesmoke;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+
+}
+
+.usage-2 {
+    margin: 10px;
+    display: inline-block;
+    margin-left: 16px;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: whitesmoke;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+}
+
+.usage-3 {
+    margin: 10px;
+    display: inline-block;
+    margin-left: 16px;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: whitesmoke;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+}
+
+/* annorunce container */
+.annorunce {
+    padding-block: 20px;
+    background-color: rgb(224, 246, 216);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.annorunce.container {
+    padding-inline: 0;
+}
+
+.oshirase {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.article {
+    padding-top: 10px;
+    text-align: center;
+    width: 33%;
+
+}
+
+
+.article p,
+.article-text p {
+    padding: 5px;
+}
+
+.article-text {
+    padding-top: 10px;
+    text-align: right;
+    width: 33%;
+    padding-right: 13%;
+}
+
+/* contact */
+
+
+.contact {
+    background-color: orange;
+    text-align: center;
+}
+
+.contact .container {
+    padding: 20px;
+}
+
+.contact p {
+    padding: 10px;
+}
+
+.school-btn {
+    text-align: center;
+}
+
+.school-btn a {
+    line-height: 100px;
+    width: 300px;
+    height: 100px;
+    background-color: rgb(249, 238, 83);
+    border-radius: 50%;
+    color: rgb(31, 29, 22);
+    text-align: center;
+    display: inline-block;
+}
+
+.contact .school {
+    display: flex;
+    justify-content: center;
+}
+
+.school img {
+    width: 100px;
+}
+
+.kobe-line {
+    padding-right: 50px;
+    padding-block: 30px;
+}
+
+.kyoto-line {
+    padding-block: 30px;
+    /* padding-right: 50px; */
+
+}
+
+/* ?\footer */
+footer h5 {
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.footer-item {
+    width: calc(100% / 4);
+}
+
+.footer img {
+    width: 70%;
+}
+
+.footer p {
+    font-size: 12px;
+    font-weight: bold;
+    padding-block: 10px;
+    color: rgb(31, 29, 22);
+}
+
+
+.footer2 {
+    text-align: center;
+    font-size: 10px;
+    padding: 10px;
+}
+
+.footer2 p {
+    color: rgb(31, 29, 22);
+}
+
+
+/* 【2】 */
+.information h1 {
+    text-align: center;
+    padding-block: 40px;
+}
+
+.information dl {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.information dt {
+    /* border: 1px solid red; */
+    width: 50%;
+    padding-block: 10px;
+}
+
+.information dd {
+    /* border: 1px solid red; */
+    width: 50%;
+    padding-block: 10px;
+}
+
+
+
+/* 【3】 */
+.school-list {
+    margin-top: 30px;
+}
+
+
+.school-list h1 {
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgb(246, 231, 100);
+    width: 170px;
+}
+
+.school-list h2 {
+    padding-bottom: 10px;
+    width: 150px;
+}
+
+.school-list dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.school-list dl dt {
+    width: 40%;
+    padding: 5px;
+}
+
+.school-list dl dd {
+    width: 60%;
+    padding: 10px;
+}
+
+.kobe {
+    display: flex;
+    padding-block: 40px;
+}
+
+.kobe a {
+    background-color: rgb(246, 231, 100);
+}
+
+
+.kobe-google {
+    margin-right: 50px;
+}
+
+
+.kyoto {
+    display: flex;
+    padding-block: 40px;
+}
+
+.kyoto a {
+    background-color: rgb(246, 231, 100);
+}
+
+
+.kyoto-google {
+    margin-right: 50px;
+}
+
+/* 【4】 */
+
+.service-list {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.service-list p {
+    padding-top: 5px;
+}
+
+
+.service-list h1 {
+    width: 200px;
+    text-align: center;
+    background-color: rgb(116, 249, 249);
+    margin: 0 auto;
+}
+
+
+
+.bus {
+    display: flex;
+    padding-block: 50px;
+}
+
+.bus-text {
+    width: 60%;
+}
+
+.bus-text h2 {
+    padding-bottom: 10px;
+}
+
+.bus-text p {
+    padding-bottom: 10px;
+}
+
+.bus-img {
+    /* border: 1px solid red; */
+    width: 40%;
+    margin-left: 20px;
+}
+
+.snack {
+    display: flex;
+    padding-bottom: 60px;
+}
+
+.snack-text {
+    width: 60%;
+}
+
+.snack-text h2 {
+    /* padding-bottom: 10px; */
+}
+
+.snack-text p {
+    padding-bottom: 10px;
+}
+
+.snack-img {
+    /* border: 1px solid red; */
+    width: 40%;
+    margin-right: 20px;
+}
+
+
+img {
+    /* border: 1px solid red; */
+    width: 40%;
+}
+
+li {
+    position: relative;
+}
+
+
+
+/* 【5】 */
+
+
+.fee-list-chart h1 {
+    margin-top: 30px;
+}
+
+.fee-list-chart {
+
+    text-align: center;
+    width: 120px;
+    background-color: rgb(244, 167, 79);
+    margin: 0 auto;
+}
+
+.fee-plan {
+    display: flex;
+    justify-content: space-between;
+}
+
+.premium,
+.midium,
+.light {
+    background-color: lemonchiffon;
+    text-align: center;
+    margin: 20px;
+
+}
+
+
+.membership-fee {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8ab62;
+    width: 120px;
+    margin: 0 auto;
+}
+
+.membership-fee-text p {
+    font-size: 40px;
+    text-align: center;
+}
+
+.lesson-table-fee h2 {
+    width: 150px;
+    height: 5vh;
+    text-align: center;
+    background-color: #f8ab62;
+    margin: 0 auto;
+}
+
+
+
+.plan-table {
+    padding-block: 50px;
+}
+
+th,
+td {
+    border: solid 1px;
+    text-align: center;
+    /* 枠線指定 */
+}
+
+.plan td {
+    background-color: rgb(208, 248, 218);
+}
+
+.menu th {
+    background-color: lemonchiffon;
+}
+
+
+table {
+    border-collapse: collapse;
+    /* セルの線を重ねる */
+    width: 100%;
+    height: 80vh;
+    /* 幅指定 */
+    table-layout: fixed;
+    /* セルの幅計算指定 */
+}
+
+
+
+.lesson-plan {
+
+    background-color: rgb(208, 248, 218);
+    margin-bottom: 70px;
+
+}
+
+.lesson-table-fee h2 {
+    margin-top: 50px;
+}
+
+.lesson-table-fee {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+/* 【6】 */
+.about-lesson {
+    text-align: center;
+    padding-block: 20px;
+}
+
+.lesson-chart h1 {
+    width: 200px;
+    height: 5vh;
+    text-align: center;
+    display: inline-block;
+    background-color: rgb(243, 169, 212);
+}
+
+
+.lesson-chart p {
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+
+.lesson-kinds {
+    display: flex;
+    flex-wrap: wrap;
+    /* padding-block: 40px; */
+}
+
+
+.ballet,
+.piano,
+.programing,
+.soroban,
+.picture,
+.english,
+.exercise,
+.shuji {
+    /* border: 1px solid red; */
+    width: 47%;
+    margin: 10px;
+    background-color: rgb(242, 234, 113);
+
+}
+
+.ballet img {
+    width: 600px;
+    height: 20vh;
+}
+
+.piano img {
+    width: 600px;
+}
+
+.programing img {
+    width: 600px;
+}
+
+.soroban img {
+    width: 600px;
+}
+
+.picture img {
+    width: 600px;
+}
+
+.english img {
+    width: 600px;
+}
+
+.exercise img {
+    width: 600px;
+}
+
+.shuji img {
+    width: 600px;
+}
+
+.other {
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+
+
+/* 【responsive】 */
+
+@media (max-width: 900px) {
+
+
+
+
+    /* 【1】 */
+
+    .top {
+        flex-direction: column;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    .top img {
+        margin: auto;
+        margin-bottom: 100px;
+    }
+
+    .text-top {
+        margin: auto;
+
+    }
+
+    .service {
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+        padding-block: 30px;
+    }
+
+    .service-text {
+        margin: auto;
+    }
+
+    .service h2 {
+        font-size: 10px;
+    }
+
+    .service img {
+        width: 100%;
+    }
+
+
+    .fee {
+        flex-direction: column-reverse;
+        width: 100%;
+        margin: auto;
+        padding-block: 30px;
+    }
+
+    .fee h2 {
+        font-size: 10px;
+    }
+
+    .fee-text {
+        margin: auto;
+    }
+
+
+    .fee img {
+        width: 100%;
+    }
+
+
+    .lesson {
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+        padding-block: 30px;
+    }
+
+    .lesson h2 {
+        font-size: 10px;
+    }
+
+    .lesson-text {
+        margin: auto;
+
+    }
+
+
+    .lesson img {
+        width: 100%;
+    }
+
+    .usage {
+        margin-block: 70px;
+    }
+
+    .usage h3 {
+        text-align: center;
+    }
+
+    /* annorunce container */
+
+    .annorunce {
+        position: relative;
+    }
+
+    .oshirase {
+        position: absolute;
+        top: 0;
+
+        /* margin: auto; */
+
+    }
+
+
+    .article {
+        width: 50%;
+    }
+
+
+    .article-text {
+        width: 50%;
+    }
+
+
+    .school-btn a {
+        line-height: 30px;
+        width: 100px;
+        height: 30px;
+    }
+
+    /* footer */
+    .footer p,
+    a {
+        font-size: 5px;
+
+
+    }
+
+
+
+    /* 【2】 */
+
+    .information dt {
+        margin: auto;
+
+
+    }
+
+    .information dd {
+        margin: auto;
+
+    }
+
+
+    /* 【3】 */
+    .kobe {
+        flex-direction: column;
+        margin: auto;
+
+    }
+
+    .kyoto {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    iframe {
+        margin: auto;
+    }
+
+
+    /* dl {
+        flex-direction: column;
+    } */
+    /* 
+    dt {
+        width: 100%;
+        border-bottom: none;
+        padding-bottom: 5px;
+    }
+
+    dd {
+        width: 100%;
+        padding-top: 5px;
+    } */
+
+    /* 【4】 */
+
+
+    .service-list h1 {
+        margin-bottom: 20px;
+    }
+
+    .bus {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .bus-text {
+        width: 100%;
+    }
+
+    .bus-img {
+        /* border: 1px solid red; */
+        width: 500px;
+        margin-left: 0px;
+
+
+    }
+
+    .snack {
+        flex-direction: column-reverse;
+        width: 100%;
+        margin-top: 50px;
+
+    }
+
+    .snack-text {
+        width: 100%;
+    }
+
+    .snack-img {
+        /* border: 1px solid red; */
+        width: 100%;
+
+    }
+
+
+    img {
+        /* border: 1px solid red; */
+        width: 100%;
+
+    }
+
+
+
+
+    /* 【5】 */
+
+    .fee-plan {
+        flex-direction: column;
+        margin: 0px;
+
+    }
+
+
+    .premium,
+    .midium,
+    .light {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+
+
+
+    /* 【6】 */
+    .lesson-kinds {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .ballet,
+    .piano,
+    .programing,
+    .soroban,
+    .picture,
+    .english,
+    .exercise,
+    .shuji {
+        margin: auto;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .lesson-kinds p {
+        text-align: center;
+    }
+
+}
